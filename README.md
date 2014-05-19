@@ -4,6 +4,8 @@ GitTestWithPython
 
 - feature-A
 - fix-B
+- feature-C
+
 
 Gitをもう一度練習します．
 
