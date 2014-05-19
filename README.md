@@ -1,4 +1,6 @@
 GitTestWithPython
 =================
 
-もう一度練習しよう
+Gitをもう一度練習します．
+
+メインはPythonで
