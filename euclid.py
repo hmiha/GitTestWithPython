@@ -1,4 +1,5 @@
 def gcd(n, m):
+    assert m > 0 and n > 0, "error"
     s = n % m
 
     if s == 0:
