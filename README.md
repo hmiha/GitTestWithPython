@@ -1,9 +1,9 @@
 GitTestWithPython
 =================
-#Gitチュートリアル
+#アルゴリズム2で作ったサムシング
 
-- feature-A
-- fix-B
+- binary.py:二分探索 
+- bubble_ 
 - feature-C
 
 
