@@ -1,8 +1,8 @@
-from random import Random
+import random
 
 def randlist(n, nmax):
     items = range(n)
-    r = Random()
+    r = random.Random()
 
     r.shuffle(items)
     return items
