@@ -1,11 +1,10 @@
 import random
 
 def randlist(n, nmax):
-    items = range(n)
-    r = random.Random()
+    list = n*[0]
+    for i in range(n):
+        list[i] = random.uniform(0,nmax)
+    return list
 
-    r.shuffle(items)
-    return items
-
-items = randlist(5,1)
-print items
+list = randlist(5, 1)
+print list
