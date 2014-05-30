@@ -4,7 +4,8 @@ import time
 def randlist(n, nmax):
     list = n*[0]
     for i in range(n):
-        list[i] = random.uniform(0,nmax)
+        #list[i] = random.uniform(0,nmax)
+        list[i] = random.random()
     return list
 
 def quick_sort(list, left, right):
@@ -28,9 +29,44 @@ def quick_sort(list, left, right):
     quick_sort(list, j + 1, right)
 
 
-t = time.clock()
+def selection_sort(list):
+    n = len(list)
+    for i in xrange(0,n):
+        k = i
+        for j in xrange(i+1, n):
+            if list[j] < list[k]:
+                k = j
+        list[i], list[k] = list[k], list[i]
 
-list = randlist(100, 1)
-quick_sort(list, 0, len(list) - 1 )
+def bubble_sort(list):
+    n = len(list)
 
-print time.clock() - t
+    for i in xrange(0, n):
+        for j in xrange(9, n-i-1):
+            if list[j] > list[j+1]:
+                list[j], list[j+1] = list[j+1], list[j]
+
+
+
+t_q = time.clock()
+
+list = randlist(10000, 1)
+list_q = list 
+list_s = list 
+list_b = list 
+
+quick_sort(list_q, 0, len(list_q) - 1 )
+
+t_s = time.clock()
+print "quick_sort"
+print t_s - t_q
+
+selection_sort(list_s)
+print "selection_sort"
+t_b = time.clock()
+print t_b - t_s
+
+print "bubble_sort"
+bubble_sort(list_b)
+print time.clock() - t_b
+
